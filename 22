@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random 30-Question Test Bank Quiz</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: auto; }
+        .question { margin-bottom: 20px; }
+        .result { margin-top: 20px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Random 30-Question Test Bank Quiz</h1>
+    <form id="quizForm"></form>
+
+    <div class="result" id="result"></div>
+
+    <script>
+        const questions = [
+            // Add your questions here
+{
+    text: "1) Which of the following is NOT a function of a hormone?",
+    options: [
+        {label: "Regulates chemical composition and volume of the internal environment", value: "a"},
+        {label: "Regulates metabolism", value: "b"},
+        {label: "Regulates glandular secretions", value: "c"},
+        {label: "Produces electrolytes", value: "d"},  // Correct
+        {label: "Controls growth and development", value: "e"}
+    ],
+    correctAnswer: "d"
+},
+{
+    text: "2) When a hormone is present in excessive levels, the number of target-cell receptors may decrease. This is called:",
+    options: [
+        {label: "Receptor recognition", value: "a"},
+        {label: "Sensory adaptation", value: "b"},
+        {label: "Paracrine regulation", value: "c"},
+        {label: "Up-regulation", value: "d"},
+        {label: "Down-regulation", value: "e"}  // Correct
+    ],
+    correctAnswer: "e"
+},
+{
+    text: "3) Differences between endocrine and exocrine glands include:",
+    options: [
+        {label: "Endocrine glands secrete hormones while exocrine glands secrete non-hormonal substances", value: "a"},
+        {label: "Exocrine glands secrete their contents into ducts; endocrine glands have no ducts", value: "b"},
+        {label: "Products of exocrine glands work at sites distant from the actual glands", value: "c"},
+        {label: "Choices a and b", value: "d"},  // Correct
+        {label: "Choices b and c", value: "e"}
+    ],
+    correctAnswer: "d"
+},
+{
+    text: "4) Which of the choices below is a type of hormone that acts on neighboring cells without entering the bloodstream?",
+    options: [
+        {label: "Local hormone", value: "a"},
+        {label: "Paracrine", value: "b"},
+        {label: "Autocrine", value: "c"},
+        {label: "Circulating hormone", value: "d"},
+        {label: "Both 1 and 2", value: "e"}  // Correct
+    ],
+    correctAnswer: "e"
+},
+{
+    text: "5) Which of the following is a group of lipid-soluble hormones derived from cholesterol? (Select all that apply)",
+    options: [
+        {label: "Steroids", value: "a"},
+        {label: "Thyroid hormones", value: "b"},
+        {label: "Eicosanoid hormones", value: "c"},
+        {label: "Amine hormones", value: "d"},
+        {label: "Peptide hormones", value: "e"}
+    ],
+    correctAnswer: "a,b"  // Correct answers: a and b
+},
+{
+    text: "6) Which of the following is an eicosanoid?",
+    options: [
+        {label: "Prostaglandin", value: "a"},
+        {label: "Leukotriene", value: "b"},
+        {label: "Glycoprotein", value: "c"},
+        {label: "Both 1 and 2", value: "d"},  // Correct
+        {label: "All of these choices", value: "e"}
+    ],
+    correctAnswer: "d"
+},
+{
+    text: "7) An individual with a deficiency in fatty acid intake might have difficulty producing which type of hormones?",
+    options: [
+        {label: "Amine hormones", value: "a"},
+        {label: "Peptide hormones", value: "b"},
+        {label: "Thyroid hormones", value: "c"},
+        {label: "Steroid hormones", value: "d"},
+        {label: "Eicosanoid hormones", value: "e"}  // Correct
+    ],
+    correctAnswer: "e"
+},
+{
+    text: "8) Which of the following statements correctly compares water-soluble hormones with lipid-soluble hormones?",
+    options: [
+        {label: "Both types of hormones are carried in the blood attached to a carrier protein", value: "a"},
+        {label: "Both types of hormone almost always stimulate increases in mRNA transcription", value: "b"},
+        {label: "Only water-soluble hormones use second messengers", value: "c"},  // Correct
+        {label: "Only water-soluble hormones require a receptor", value: "d"},
+        {label: "Lipid-soluble hormones are not found in the bloodstream", value: "e"}
+    ],
+    correctAnswer: "c"
+},
+{
+    text: "9) When one hormone opposes the action of another hormone, it is called a(n)",
+    options: [
+        {label: "Synergistic effect", value: "a"},
+        {label: "Permissive effect", value: "b"},
+        {label: "Antagonistic effect", value: "c"},  // Correct
+        {label: "Circulating effect", value: "d"},
+        {label: "Local effect", value: "e"}
+    ],
+    correctAnswer: "c"
+},
+{
+    text: "10) Which of the following is NOT a common method of stimulating hormone secretion from an endocrine cell?",
+    options: [
+        {label: "Signals from the nervous system", value: "a"},
+        {label: "Chemical changes in the blood", value: "b"},
+        {label: "Mechanical stretching of the endocrine cell", value: "c"},  // Correct
+        {label: "Releasing hormones", value: "d"},
+        {label: "Both Signals from the nervous system and chemical changes in the blood", value: "e"}
+    ],
+    correctAnswer: "c"
+},
+{
+    text: "11) What controls hormone release from the anterior pituitary gland?",
+    options: [
+        {label: "Muscle contraction", value: "a"},
+        {label: "The peripheral nervous system", value: "b"},
+        {label: "Hormones released from the hypothalamus", value: "c"},  // Correct
+        {label: "Action potentials from the thalamus", value: "d"},
+        {label: "Chemical changes in the cerebrospinal fluid (CSF)", value: "e"}
+    ],
+    correctAnswer: "c"
+},
+{
+    text: "12) How are most hormones released?",
+    options: [
+        {label: "On a continuous, low-level basis", value: "a"},
+        {label: "In short bursts with little or no secretion between bursts", value: "b"},  // Correct
+        {label: "In a gradually increasing then decreasing pattern", value: "c"},
+        {label: "Continuously at high levels", value: "d"},
+        {label: "It depends on the immediate needs of the body", value: "e"}
+    ],
+    correctAnswer: "b"
+},
+{
+    text: "13) Which of the following anterior pituitary hormones stimulates general body growth?",
+    options: [
+        {label: "Somatotropin", value: "a"},  // Correct
+        {label: "Prolactin", value: "b"},
+        {label: "Thyrotropin", value: "c"},
+        {label: "Luteinizing hormone", value: "d"},
+        {label: "Adrenocorticotropic hormone", value: "e"}
+    ],
+    correctAnswer: "a"
+},
+{
+    text: "14) Human growth hormone is secreted by [dropdown 1] in the anterior pituitary gland, while follicle stimulating hormone is secreted by [dropdown 2].",
+    options: [
+        {label: "Corticotrophs", value: "a"},
+        {label: "Gonadotrophs", value: "b"},
+        {label: "Somatotrophs", value: "c"},  // Correct
+        {label: "Thyrotrophs", value: "d"}
+    ],
+    correctAnswer: "c"  // For dropdown 1
+},
+{
+    text: "15) Which of the following anterior pituitary hormones stimulates milk production?",
+    options: [
+        {label: "Luteinizing hormone", value: "a"},
+        {label: "Prolactin", value: "b"},  // Correct
+        {label: "Thyrotropin", value: "c"},
+        {label: "Melanocyte stimulating hormone", value: "d"},
+        {label: "Adrenocorticotropic hormone", value: "e"}
+    ],
+    correctAnswer: "b"
+},
+{
+    text: "16) Which of the following anterior pituitary hormones stimulates the adrenal cortex to secrete cortisol?",
+    options: [
+        {label: "Luteinizing hormone", value: "a"},
+        {label: "Prolactin", value: "b"},
+        {label: "Insulin-like growth factors", value: "c"},
+        {label: "Melanocyte-stimulating hormone", value: "d"},
+        {label: "Adrenocorticotropic hormone", value: "e"}  // Correct
+    ],
+    correctAnswer: "e"
+},
+{
+    text: "17) Which of the following anterior pituitary hormones stimulates the gonads to secrete progesterone and/or testosterone?",
+    options: [
+        {label: "Luteinizing hormone", value: "a"},  // Correct
+        {label: "TSH", value: "b"},
+        {label: "Corticotropin", value: "c"},
+        {label: "Melanocyte-stimulating hormone", value: "d"},
+        {label: "Growth hormone", value: "e"}
+    ],
+    correctAnswer: "a"
+},
+{
+    text: "18) Which of the following anterior pituitary hormones stimulates the gonads to secrete progesterone and/or testosterone?",
+    options: [
+        {label: "Luteinizing hormone", value: "a"},  // Correct
+        {label: "TSH", value: "b"},
+        {label: "Corticotropin", value: "c"},
+        {label: "Melanocyte-stimulating hormone", value: "d"},
+        {label: "Growth hormone", value: "e"}
+    ],
+    correctAnswer: "a"
+},
+{
+    text: "19) Which type of anterior pituitary cell secretes melanocyte stimulating hormone (MSH)?",
+    options: [
+        {label: "Thyrotrophs", value: "a"},
+        {label: "Gonadotrophs", value: "b"},
+        {label: "Somatotrophs", value: "c"},
+        {label: "Lactotrophs", value: "d"},
+        {label: "Corticotrophs", value: "e"}  // Correct
+    ],
+    correctAnswer: "e"
+},
+{
+    text: "20) Which of the following pairs of hormones are released by the posterior pituitary gland?",
+    options: [
+        {label: "Prolactin and growth hormone", value: "a"},
+        {label: "Melatonin-stimulating hormone and oxytocin", value: "b"},
+        {label: "Oxytocin and antidiuretic hormone", value: "c"},  // Correct
+        {label: "Follicle-stimulating hormone and thyroid-stimulating hormone", value: "d"},
+        {label: "Prolactin and ACTH", value: "e"}
+    ],
+    correctAnswer: "c"
+},
+{
+    text: "21) The amount of ADH that is released by the posterior pituitary glands varies with",
+    options: [
+        {label: "Blood osmotic pressure", value: "a"},  // Correct
+        {label: "Blood calcium levels", value: "b"},
+        {label: "Blood oxygen levels", value: "c"},
+        {label: "Blood glucose levels", value: "d"},
+        {label: "All choices are correct", value: "e"}
+    ],
+    correctAnswer: "a"
+},
+{
+    text: "22) In addition to increasing growth of bones and soft tissues, somatotropin (Select all that apply.)",
+    options: [
+        {label: "Enhances lipolysis", value: "a"},
+        {label: "Decreases glucose uptake by most cells", value: "b"},
+        {label: "Stimulates liver cells to release glucose", value: "c"},
+        {label: "Increases cellular uptake of glucose", value: "d"}
+    ],
+    correctAnswer: "a,b,c"  // Correct answers: a, b, and c
+},
+{
+    text: "23) Which of the following hormones opposes the action of parathyroid hormone?",
+    options: [
+        {label: "Thyroid-stimulating hormone", value: "a"},
+        {label: "Testosterone", value: "b"},
+        {label: "Insulin", value: "c"},
+        {label: "Calcitonin", value: "d"},  // Correct
+        {label: "Calcitriol", value: "e"}
+    ],
+    correctAnswer: "d"
+},
+{
+    text: "24) Which of the following statements does NOT describe a step in the synthesis and secretion of T3 and T4?",
+    options: [
+        {label: "Iodide trapping", value: "a"},
+        {label: "Oxidation of iodide", value: "b"},
+        {label: "Coupling of T1 and T2", value: "c"},
+        {label: "Synthesis of PTH", value: "d"},  // Correct
+        {label: "Iodination of tyrosine", value: "e"}
+    ],
+    correctAnswer: "d"
+},
+{
+    text: "25) Parathyroid hormone is the major regulator of the plasma concentration of which of the following ions?",
+    options: [
+        {label: "Calcium", value: "a"},  // Correct
+        {label: "Sodium", value: "b"},
+        {label: "Potassium", value: "c"},
+        {label: "Chloride", value: "d"},
+        {label: "Manganese", value: "e"}
+    ],
+    correctAnswer: "a"
+},
+{
+    text: "26) Which endocrine gland stores its hormonal product for approximately 100 days?",
+    options: [
+        {label: "Parathyroid", value: "a"},
+        {label: "Adrenal", value: "b"},
+        {label: "Pituitary", value: "c"},
+        {label: "Hypothalamus", value: "d"},
+        {label: "Thyroid", value: "e"}  // Correct
+    ],
+    correctAnswer: "e"
+},
+{
+    text: "27) Thyroid hormone functions include (Select all that apply.)",
+    options: [
+        {label: "Increasing the basal metabolic rate", value: "a"},
+        {label: "Enhancing entry of amino acids into cells", value: "b"},
+        {label: "Enhancing actions of catecholamines", value: "c"},
+        {label: "Regulating development of nervous tissue and bones", value: "d"}
+    ],
+    correctAnswer: "a,b,c,d"  // All options are correct
+},
+{
+    text: "28) Which of the following conditions would result from hyposecretion of aldosterone?",
+    options: [
+        {label: "Decreased heart rate", value: "a"},
+        {label: "Decreased airway dilation", value: "b"},
+        {label: "Dehydration", value: "c"},  // Correct
+        {label: "Decreased oxygen delivery to the brain", value: "d"},
+        {label: "Metabolic acidosis", value: "e"}
+    ],
+    correctAnswer: "c"
+},
+{
+    text: "29) Which of the following is NOT a common effect of glucocorticoid stimulation?",
+    options: [
+        {label: "Protein and fat breakdown", value: "a"},
+        {label: "Glucose formation", value: "b"},
+        {label: "Depression of immune responses", value: "c"},
+        {label: "Reduction of inflammation", value: "d"},
+        {label: "Increased production of all types of blood cells", value: "e"}  // Correct
+    ],
+    correctAnswer: "e"
+},
+{
+    text: "30) Which blood glucose-lowering hormone is produced by the pancreatic islet cells?",
+    options: [
+        {label: "Insulin", value: "a"},  // Correct
+        {label: "Glucagon", value: "b"},
+        {label: "Somatostatin", value: "c"},
+        {label: "Thyroid hormones", value: "d"},
+        {label: "Calcitonin", value: "e"}
+    ],
+    correctAnswer: "a"
+},
+{
+    text: "31) Which of the following hormones promotes increases in the basal metabolic rate (BMR)?",
+    options: [
+        {label: "Insulin", value: "a"},
+        {label: "Adrenocorticotropic hormone", value: "b"},
+        {label: "Glucagon", value: "c"},
+        {label: "Thyroid hormone", value: "d"},  // Correct
+        {label: "Calcitonin", value: "e"}
+    ],
+    correctAnswer: "d"
+},
+{
+    text: "32) Which of the following hormones are released in response to decreases in blood glucose concentration?",
+    options: [
+        {label: "Insulin", value: "a"},
+        {label: "Luteinizing hormone", value: "b"},
+        {label: "Glucagon", value: "c"},  // Correct
+        {label: "Parathyroid hormone", value: "d"},
+        {label: "Calcitonin", value: "e"}
+    ],
+    correctAnswer: "c"
+},
+{
+    text: "33) Which of the following hormones plays key regulatory roles in the body's long-term response to stress?",
+    options: [
+        {label: "Insulin, Glucagon, Thyroid hormone", value: "a"},
+        {label: "hGH, Insulin, Aldosterone", value: "b"},
+        {label: "Cortisol, hGH, Thyroid hormone", value: "c"},  // Correct
+        {label: "Parathyroid hormone, Cortisol, hGH", value: "d"},
+        {label: "Calcitonin, Thyroid hormone, Insulin", value: "e"}
+    ],
+    correctAnswer: "c"
+},
+{
+    text: "34) Which of the following is NOT a common response of the body to long-term stress?",
+    options: [
+        {label: "Increased lipolysis", value: "a"},
+        {label: "Increased glycogenolysis", value: "b"},
+        {label: "Increased gluconeogenesis", value: "c"},
+        {label: "Increased digestive activities", value: "d"},  // Correct
+        {label: "Increased breakdown of proteins", value: "e"}
+    ],
+    correctAnswer: "d"
+},
+{
+    text: "35) Which of the labeled endocrine glands secretes hGH, TSH, FSH, and other hormones?",
+    options: [
+        {label: "A", value: "a"},
+        {label: "B", value: "b"},  // Correct
+        {label: "C", value: "c"},
+        {label: "I", value: "d"},
+        {label: "D", value: "e"}
+    ],
+    correctAnswer: "b"
+},
+{
+    text: "36) Which of the labeled endocrine glands secretes hormones that regulate the basal metabolic rate (BMR)?",
+    options: [
+        {label: "C", value: "a"},  // Correct
+        {label: "D", value: "b"},
+        {label: "A", value: "c"},
+        {label: "G", value: "d"},
+        {label: "I", value: "e"}
+    ],
+    correctAnswer: "a"
+},
+{
+    text: "37) Which of the following labeled endocrine glands secretes hormones that regulate blood calcium ion levels?",
+    options: [
+        {label: "B", value: "a"},
+        {label: "A", value: "b"},
+        {label: "H", value: "c"},
+        {label: "D", value: "d"},
+        {label: "I", value: "e"}  // Correct
+    ],
+    correctAnswer: "e"
+},
+{
+    text: "38) Which of the labeled endocrine glands secretes steroid hormones in response to long-term stress?",
+    options: [
+        {label: "D", value: "a"},
+        {label: "G", value: "b"},
+        {label: "H", value: "c"},  // Correct
+        {label: "I", value: "d"},
+        {label: "F", value: "e"}
+    ],
+    correctAnswer: "c"
+},
+{
+    text: "39) Which of the following is NOT an endocrine gland aging effect?",
+    options: [
+        {label: "Rise in the blood levels of PTH", value: "a"},
+        {label: "Less cortisol and aldosterone production", value: "b"},
+        {label: "Decreased levels of gonadotropins", value: "c"},
+        {label: "Decreased levels of calcitriol and calcitonin", value: "d"},
+        {label: "Increase in thymus size", value: "e"}  // Correct
+    ],
+    correctAnswer: "e"
+},
+{
+    text: "40) Which zone of the adrenal gland secretes aldosterone?",
+    options: [
+        {label: "A", value: "a"},  // Correct
+        {label: "B", value: "b"},
+        {label: "C", value: "c"},
+        {label: "D", value: "d"},
+        {label: "None of the zones", value: "e"}
+    ],
+    correctAnswer: "a"
+},
+{
+    text: "41) Which zone of the adrenal gland secretes androgens?",
+    options: [
+        {label: "A", value: "a"},
+        {label: "B", value: "b"},
+        {label: "C", value: "c"},
+        {label: "D", value: "d"},  // Correct
+        {label: "None of the zones", value: "e"}
+    ],
+    correctAnswer: "d"
+},
+{
+    text: "42) Which labeled structure in the diagram secretes glucagon?",
+    options: [
+        {label: "A", value: "a"},
+        {label: "B", value: "b"},
+        {label: "C", value: "c"},
+        {label: "D", value: "d"},
+        {label: "E", value: "e"}  // Correct
+    ],
+    correctAnswer: "e"
+},
+{
+    text: "43) Which labeled structure in the diagram secretes a hormone that stimulates events that lower blood glucose concentration?",
+    options: [
+        {label: "A", value: "a"},
+        {label: "B", value: "b"},
+        {label: "C", value: "c"},  // Correct
+        {label: "D", value: "d"},
+        {label: "E", value: "e"}
+    ],
+    correctAnswer: "c"
+},
+{
+    text: "44) Which of the following is an incorrect pairing of a body system and an endocrine contribution to that system?",
+    options: [
+        {label: "Thyroid hormones promote normal development and growth of the skeleton", value: "a"},
+        {label: "Erythropoietin regulates the amount of oxygen carried in blood by adjusting the number of red blood cells", value: "b"},
+        {label: "Leptin enhances appetite", value: "c"},  // Correct
+        {label: "Glucocorticoids depress inflammation and immune responses", value: "d"},
+        {label: "Epinephrine depresses the activity of the digestive system", value: "e"}
+    ],
+    correctAnswer: "c"
+},
+{
+    text: "45) Compare and contrast the mechanisms of action of lipid-soluble versus water-soluble hormones.",
+    options: [
+        {label: "Open-ended question", value: "a"}
+    ],
+    correctAnswer: "a"  // Open-ended question
+},
+{
+    text: "46) Describe the role of the hypothalamus in the regulation of hormone release from the pituitary gland.",
+    options: [
+        {label: "Open-ended question", value: "a"}
+    ],
+    correctAnswer: "a"  // Open-ended question
+},
+{
+    text: "47) Enuresis, or bedwetting, may be caused by psychological, anatomical or physiological factors. In the latter case, vasopressin is often prescribed and is a very effective treatment. What is vasopressin? How can it prevent enuresis?",
+    options: [
+        {label: "Open-ended question", value: "a"}
+    ],
+    correctAnswer: "a"  // Open-ended question
+},
+{
+    text: "48) What is a goiter? Explain how goiters can develop in both hyposecretion and hypersecretion disorders. In these hyposecretion and hypersecretion disorders, would you expect the levels of other regulatory hormones involved in control of thyroid hormone secretion to be high or low? Why?",
+    options: [
+        {label: "Open-ended question", value: "a"}
+    ],
+    correctAnswer: "a"  // Open-ended question
+},
+{
+    text: "49) Compare the metabolic changes that occur during starvation with those that occur in diabetes mellitus.",
+    options: [
+        {label: "Open-ended question", value: "a"}
+    ],
+    correctAnswer: "a"  // Open-ended question
+},
+{
+    text: "50) Benign tumors of chromaffin cells of the adrenal medulla cause [dropdown 1]. The only treatment for this is [dropdown 2].",
+    options: [
+        {label: "Acromegaly", value: "a"},
+        {label: "Goiter", value: "b"},
+        {label: "Myxedema", value: "c"},
+        {label: "Pheochromocytoma", value: "d"},  // Correct
+        {label: "Growth hormone supplementation", value: "e"},
+        {label: "Radiation", value: "f"},
+        {label: "Surgery", value: "g"},
+        {label: "Thyroid hormone supplementation", value: "h"}
+    ],
+    correctAnswer: "d"
+},
+{
+    text: "51) Which of the following hormones is produced in the zone of the adrenal gland labeled B?",
+    options: [
+        {label: "Cortisol", value: "a"},
+        {label: "Epinephrine", value: "b"},
+        {label: "Norepinephrine", value: "c"},
+        {label: "Glucagon", value: "d"},
+        {label: "Androgens", value: "e"}  // Correct
+    ],
+    correctAnswer: "e"
+},
+{
+    text: "52) Which of the following describes a function of a hormone produced in the zone of the adrenal gland labeled B?",
+    options: [
+        {label: "Enables body to resist stressors and also increases blood glucose", value: "a"},  // Correct
+        {label: "Intensifies sympathetic responses in other parts of the body", value: "b"},
+        {label: "Accelerates formation of glucose from glycogen (glycogenolysis)", value: "c"},
+        {label: "Stimulates growth of axillary and pubic hair", value: "d"},
+        {label: "Stimulates breast development and milk secretion", value: "e"}
+    ],
+    correctAnswer: "a"
+},
+{
+    text: "53) Which of the following conditions could potentially result from hyposecretion of a hormone released by the portion of the marked gland in the diagram?",
+    options: [
+        {label: "Tetany", value: "a"},  // Correct
+        {label: "Acromegaly", value: "b"},
+        {label: "Diabetes insipidus", value: "c"},
+        {label: "Goiter", value: "d"},
+        {label: "Cushing's syndrome", value: "e"}
+    ],
+    correctAnswer: "a"
+},
+{
+    text: "54) Identify the stalk-like structure labeled A in the diagram.",
+    options: [
+        {label: "Hypothalamus", value: "a"},
+        {label: "Anterior pituitary", value: "b"},
+        {label: "Posterior pituitary", value: "c"},
+        {label: "Infundibulum", value: "d"},  // Correct
+        {label: "Hypophysial fossa", value: "e"}
+    ],
+    correctAnswer: "d"
+},
+{
+    text: "55) The endocrine gland shown in the diagram is found in a depression in the sphenoid bone (marked in the diagram) called the",
+    options: [
+        {label: "Maxilla", value: "a"},
+        {label: "Infundibulum", value: "b"},
+        {label: "Primary plexus", value: "c"},
+        {label: "Cribiform plate", value: "d"},
+        {label: "Hypophyseal fossa", value: "e"}  // Correct
+    ],
+    correctAnswer: "e"
+},
+{
+    text: "56) Which of the following bones (marked in the diagram) contains a depression which houses the endocrine gland shown in the diagram?",
+    options: [
+        {label: "Maxilla", value: "a"},
+        {label: "Sphenoid bone", value: "b"},  // Correct
+        {label: "Mandible", value: "c"},
+        {label: "Ethmoid bone", value: "d"},
+        {label: "Temporal bone", value: "e"}
+    ],
+    correctAnswer: "b"
+},
+{
+    text: "57) Which of the following hormones is produced by the cells marked in the thyroid follicle shown in the histology picture?",
+    options: [
+        {label: "Calcitonin", value: "a"},
+        {label: "Vasopressin", value: "b"},
+        {label: "Triiodothyronine (T3)", value: "c"},  // Correct
+        {label: "Antidiuretic hormone (ADH)", value: "d"},
+        {label: "Calcitriol", value: "e"}
+    ],
+    correctAnswer: "c"
+},
+{
+    text: "58) Which of the following hormones is produced by the cells marked in the thyroid follicle shown in the histology picture?",
+    options: [
+        {label: "Calcitonin", value: "a"},
+        {label: "Vasopressin", value: "b"},
+        {label: "Triiodothyronine (T3)", value: "c"},
+        {label: "Antidiuretic hormone (ADH)", value: "d"},
+        {label: "Calcitriol", value: "e"}  // Correct
+    ],
+    correctAnswer: "e"
+},
+{
+    text: "59) What is the major function of the hormone produced by the cells marked in the thyroid follicle shown in the histology picture?",
+    options: [
+        {label: "Involved in regulation of calcium homeostasis", value: "a"},
+        {label: "Enhances contraction of smooth muscle cells in the uterus during delivery", value: "b"},
+        {label: "In females, initiates development of oocytes. In males, stimulates sperm production", value: "c"},
+        {label: "Stimulates the action of osteoclasts", value: "d"},
+        {label: "Increases blood levels of Na+ and water", value: "e"}  // Correct
+    ],
+    correctAnswer: "e"
+},
+{
+    text: "60) Which of the following diseases results when the cells marked in the histology image are destroyed by the immune system?",
+    options: [
+        {label: "Cushing's disease", value: "a"},
+        {label: "Addison's disease", value: "b"},  // Correct
+        {label: "Acromegaly", value: "c"},
+        {label: "Type 1 diabetes", value: "d"},
+        {label: "Diabetes insipidus", value: "e"}
+    ],
+    correctAnswer: "b"
+},
+{
+    text: "61) What endocrine abnormality does the male on the left standing next to a female of average height have?",
+    options: [
+        {label: "Goiter", value: "a"},
+        {label: "Graves' disease", value: "b"},
+        {label: "Type 2 diabetes", value: "c"},
+        {label: "Cushing's syndrome", value: "d"},
+        {label: "Pituitary gigantism", value: "e"}  // Correct
+    ],
+    correctAnswer: "e"
+},
+{
+    text: "62) The disorder shown in the male on the left of this figure is due to a hypersecretion of hormones by which endocrine gland?",
+    options: [
+        {label: "Thyroid gland", value: "a"},
+        {label: "Pineal gland", value: "b"},
+        {label: "Parathyroid gland", value: "c"},
+        {label: "Pituitary gland", value: "d"},  // Correct
+        {label: "Pancreas", value: "e"}
+    ],
+    correctAnswer: "d"
+},
+{
+    text: "63) The patient shown is suffering from a disease called ________, caused by a pituitary hypersecretion of hGH during adulthood.",
+    options: [
+        {label: "Goiter", value: "a"},
+        {label: "Graves' Disease", value: "b"},
+        {label: "Acromegaly", value: "c"},  // Correct
+        {label: "Cushing's syndrome", value: "d"},
+        {label: "Gigantism", value: "e"}
+    ],
+    correctAnswer: "c"
+},
+{
+    text: "64) Which of the following endocrine disorders is the individual shown in this picture suffering from?",
+    options: [
+        {label: "Acromegaly", value: "a"},  // Correct
+        {label: "Graves' Disease", value: "b"},
+        {label: "Goiter", value: "c"},
+        {label: "Cushing's syndrome", value: "d"},
+        {label: "Gigantism", value: "e"}
+    ],
+    correctAnswer: "a"
+},
+{
+    text: "65) Hypothyroidism during adulthood can produce which of the following disorders?",
+    options: [
+        {label: "Acromegaly", value: "a"},
+        {label: "Graves' Disease", value: "b"},
+        {label: "Hypoglycemia", value: "c"},
+        {label: "Cushing's syndrome", value: "d"},
+        {label: "Myxedema", value: "e"}  // Correct
+    ],
+    correctAnswer: "e"
+},
+{
+    text: "66) The following is a possible progression of which of the following disorders: Inadequate dietary iodine intake → low level of thyroid hormone in blood → increased TSH secretion → thyroid gland enlargement.",
+    options: [
+        {label: "Acromegaly", value: "a"},
+        {label: "Tetany", value: "b"},
+        {label: "Goiter", value: "c"},  // Correct
+        {label: "Cushing's syndrome", value: "d"},
+        {label: "Addison's disease", value: "e"}
+    ],
+    correctAnswer: "c"
+},
+{
+    text: "67) Which of the following is an abnormal condition of excess androgen secretion, observed primarily in women, that is characterized by the presence of excessive body and facial hair in a male pattern?",
+    options: [
+        {label: "Acromegaly", value: "a"},
+        {label: "Tetany", value: "b"},
+        {label: "Hirsutism", value: "c"},  // Correct
+        {label: "Gynecomastia", value: "d"},
+        {label: "Myxedema", value: "e"}
+    ],
+    correctAnswer: "c"
+},
+{
+    text: "68) A condition characterized by excessive development of mammary glands in a male is called",
+    options: [
+        {label: "Acromegaly", value: "a"},
+        {label: "Pheochromocytoma", value: "b"},
+        {label: "Hirsutism", value: "c"},
+        {label: "Gynecomastia", value: "d"},  // Correct
+        {label: "Myxedema", value: "e"}
+    ],
+    correctAnswer: "d"
+},
+{
+    text: "69) Two of the hallmarks of hyperparathyroidism are [dropdown 1] and [dropdown 2].",
+    options: [
+        {label: "Broken bones", value: "a"},
+        {label: "Kidney stones", value: "b"}
+    ],
+    correctAnswer: "a,b"  // Open-ended question with multiple answers
+},
+{
+    text: "70) Hypersecretion of a hormone by the endocrine gland marked in the diagram results in a type of depression that affects some people during the winter months, when the day length is short. This condition is known as",
+    options: [
+        {label: "Thyroid crisis (storm)", value: "a"},
+        {label: "General adaptation syndrome (GAS)", value: "b"},
+        {label: "Seasonal affective disorder (SAD)", value: "c"},  // Correct
+        {label: "Addisonian crisis", value: "d"},
+        {label: "Posttraumatic stress disorder (PTSD)", value: "e"}
+    ],
+    correctAnswer: "c"
+},
+{
+    text: "71) Seasonal affective disorder is due to hypersecretion of which of the following hormones by the endocrine gland marked in the diagram?",
+    options: [
+        {label: "Testosterone", value: "a"},
+        {label: "Glucagon", value: "b"},
+        {label: "Melatonin", value: "c"},  // Correct
+        {label: "Aldosterone", value: "d"},
+        {label: "Vasopressin", value: "e"}
+    ],
+    correctAnswer: "c"
+},
+{
+    text: "72) Which of the following hormones is produced by the endocrine gland marked in the diagram?",
+    options: [
+        {label: "Testosterone", value: "a"},
+        {label: "Glucagon", value: "b"},
+        {label: "Melatonin", value: "c"},
+        {label: "Thymopoietin", value: "d"},  // Correct
+        {label: "Vasopressin", value: "e"}
+    ],
+    correctAnswer: "d"
+},
+{
+    text: "73) All prostaglandins are derived from a 20-carbon precursor molecule called",
+    options: [
+        {label: "Thromboxane", value: "a"},
+        {label: "Intrinsic factor", value: "b"},
+        {label: "Thymopoietin", value: "c"},
+        {label: "Arachidonic acid", value: "d"},  // Correct
+        {label: "Cholesterol", value: "e"}
+    ],
+    correctAnswer: "d"
+},
+{
+    text: "74) Human chorionic gonadotropin (hCG) is produced by the",
+    options: [
+        {label: "Placenta", value: "a"},  // Correct
+        {label: "Ovaries", value: "b"},
+        {label: "Testes", value: "c"},
+        {label: "Pituitary gland", value: "d"},
+        {label: "Hypothalamus", value: "e"}
+    ],
+    correctAnswer: "a"
+},
+{
+    text: "75) Leptin is a hormone produced by the",
+    options: [
+        {label: "Placenta", value: "a"},
+        {label: "Ovaries", value: "b"},
+        {label: "Testes", value: "c"},
+        {label: "Pituitary gland", value: "d"},
+        {label: "Adipose tissue", value: "e"}  // Correct
+    ],
+    correctAnswer: "e"
+},
+{
+    text: "76) The anterior pituitary develops from which of the following germ layers during embryonic development?",
+    options: [
+        {label: "Mesoderm", value: "a"},
+        {label: "Endoderm", value: "b"},
+        {label: "Ectoderm", value: "c"},  // Correct
+        {label: "A combination of two of the layers", value: "d"},
+        {label: "None of the answer selections are correct", value: "e"}
+    ],
+    correctAnswer: "c"
+},
+{
+    text: "77) The thyroid gland develops from which of the following germ layers during embryonic development?",
+    options: [
+        {label: "Mesoderm", value: "a"},
+        {label: "Endoderm", value: "b"},  // Correct
+        {label: "Ectoderm", value: "c"},
+        {label: "A combination of two of the layers", value: "d"},
+        {label: "None of the answer selections are correct", value: "e"}
+    ],
+    correctAnswer: "b"
+},
+{
+    text: "78) The adrenal medulla develops from which of the following germ layers during embryonic development?",
+    options: [
+        {label: "Mesoderm", value: "a"},
+        {label: "Endoderm", value: "b"},
+        {label: "Ectoderm", value: "c"},  // Correct
+        {label: "A combination of two of the layers", value: "d"},
+        {label: "None of the answer selections are correct", value: "e"}
+    ],
+    correctAnswer: "c"
+},
+{
+    text: "79) Endocrine tissues that secrete steroid hormones are derived from",
+    options: [
+        {label: "Mesoderm", value: "a"},  // Correct
+        {label: "Endoderm", value: "b"},
+        {label: "Ectoderm", value: "c"},
+        {label: "A combination of two or more layers", value: "d"},
+        {label: "None of the layers that are listed", value: "e"}
+    ],
+    correctAnswer: "a"
+},
+{
+    text: "80) Which of the following glands is NOT an endocrine gland?",
+    options: [
+        {label: "Pituitary gland", value: "a"},
+        {label: "Thyroid gland", value: "b"},
+        {label: "Adrenal gland", value: "c"},
+        {label: "Sebaceous gland", value: "d"},  // Correct
+        {label: "Pineal gland", value: "e"}
+    ],
+    correctAnswer: "d"
+},
+{
+    text: "81) Which of the following is NOT a common characteristic of an exocrine gland?",
+    options: [
+        {label: "Initially secretes its products into a duct", value: "a"},
+        {label: "Secretes materials onto outer surface of the body", value: "b"},
+        {label: "Secretes materials into the lumen of hollow organs", value: "c"},
+        {label: "Its secretory products are carried in body fluids to distant target cells", value: "d"},  // Correct
+        {label: "All the answer selections describe characteristics of exocrine glands", value: "e"}
+    ],
+    correctAnswer: "d"
+},
+{
+    text: "82) Since insulin released from the pancreas is carried in the bloodstream to distant target cells, like muscle cells, it is considered to be a(n)",
+    options: [
+        {label: "Local hormone", value: "a"},
+        {label: "Circulating hormone", value: "b"},  // Correct
+        {label: "Paracrine", value: "c"},
+        {label: "Autocrine", value: "d"},
+        {label: "Neurotransmitter", value: "e"}
+    ],
+    correctAnswer: "b"
+},
+{
+    text: "83) Which of the following is an example of a hormone that is secreted from an endocrine gland in response to a chemical change in the blood?",
+    options: [
+        {label: "Parathyroid hormone release from the parathyroid gland", value: "a"},
+        {label: "Insulin release from the pancreas", value: "b"},
+        {label: "Glucagon release from the pancreas", value: "c"},
+        {label: "ADH release from the posterior pituitary gland", value: "d"},
+        {label: "All the answer selections are correct", value: "e"}  // Correct
+    ],
+    correctAnswer: "e"
+},
+{
+    text: "84) All the following hormones are produced and secreted by the ovaries EXCEPT",
+    options: [
+        {label: "Estradiol", value: "a"},
+        {label: "Estrone", value: "b"},
+        {label: "Progesterone", value: "c"},
+        {label: "Inhibin", value: "d"},
+        {label: "Follicle-stimulating hormone", value: "e"}  // Correct
+    ],
+    correctAnswer: "e"
+},
+{
+    text: "85) Which of the following is a protein hormone produced by the testes that suppresses secretion of follicle-stimulating hormone by the anterior pituitary gland?",
+    options: [
+        {label: "Chorionic gonadotropin", value: "a"},
+        {label: "Testosterone", value: "b"},
+        {label: "Estradiol", value: "c"},
+        {label: "Inhibin", value: "d"},  // Correct
+        {label: "Relaxin", value: "e"}
+    ],
+    correctAnswer: "d"
+},
+            // Continue adding questions up to q85 using the same structure as above...
+       ];
+
+        // Function to randomly shuffle an array
+        function shuffle(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        // Select 30 random questions
+        const selectedQuestions = shuffle(questions).slice(0, 30);
+
+        const quizForm = document.getElementById('quizForm');
+        let correctAnswers = {};
+
+        // Dynamically create the form with 30 random questions
+        selectedQuestions.forEach((question, index) => {
+            const questionDiv = document.createElement('div');
+            questionDiv.classList.add('question');
+            questionDiv.innerHTML = `<p>${question.text}</p>`;
+
+            question.options.forEach(option => {
+                const optionLabel = document.createElement('label');
+                optionLabel.innerHTML = `<input type="radio" name="q${index}" value="${option.value}"> ${option.label}<br>`;
+                questionDiv.appendChild(optionLabel);
+            });
+
+            quizForm.appendChild(questionDiv);
+            correctAnswers[`q${index}`] = question.correctAnswer;  // Store correct answer
+        });
+
+        // Add the submit button to the form
+        quizForm.innerHTML += '<input type="submit" value="Submit Test">';
+
+        // Handle form submission and scoring
+        quizForm.onsubmit = function(event) {
+            event.preventDefault();  // Prevent form submission
+
+            let score = 0;
+            let form = new FormData(this);  // Create FormData object to capture input values
+
+            // Check answers against correct answers
+            for (let question in correctAnswers) {
+                if (form.get(question) === correctAnswers[question]) {
+                    score++;
+                }
+            }
+
+            // Display result
+            let totalQuestions = Object.keys(correctAnswers).length;
+            let resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = `You scored ${score} out of ${totalQuestions}.`;
+        }
+    </script>
+</body>
+</html>
